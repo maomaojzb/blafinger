@@ -386,6 +386,36 @@
           ]
         }
       ]
+    },{
+      "id": "fings-dev-h3c-casp-sa",
+      "info": {
+        "name": "新华三-综合日志审计平台",
+        "author": "xxx",
+        "severity": "info",
+        "metadata": {
+          "fofa-query": "web.body=\"/static/images/long_string.svg\"",
+          "product": "新华三综合日志审计平台",
+          "vendor": "h3c",
+          "tags": "h3c-casp-sa"
+        }
+      },
+      "http": [
+        {
+          "method": "GET",
+          "path": [
+            "{{BaseURL}}/toLogin"
+          ],
+          "matchers": [
+            {
+              "type": "word",
+              "part": "body",
+              "words": [
+                "/static/images/long_string.svg"
+              ]
+            }
+          ]
+        }
+      ]
     }
     
 ]
