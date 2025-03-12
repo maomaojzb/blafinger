@@ -1,0 +1,391 @@
+[
+    {
+        "id": "fings-dev-sangfor-ad",
+        "info": {
+          "name": "深信服-AD交付应用系统",
+          "author": "xxx",
+          "severity": "info",
+          "description": "description",
+          "metadata": {
+            "fofa-query": "body=\"\"",
+            "product": "ad应用交付",
+            "vendor": "sangfor",
+            "tags": "sangfor-ad"
+          }
+        },
+        "http": [
+          {
+            "method": "GET",
+            "path": [
+              "{{BaseURL}}/login"
+            ],
+            "matchers": [
+              {
+                "type": "word",
+                "part": "body",
+                "words": [
+                  "/static/es5_shim/es5-sham.js"
+                ]
+              }
+            ]
+          }
+        ]
+    },
+    {
+        "id": "fings-dev-sangfor-sta",
+        "info": {
+          "name": "深信服-STA潜伏威胁探针",
+          "author": "xxx",
+          "severity": "info",
+          "description": "description",
+          "metadata": {
+            "fofa-query": "body=\"login_new/theme/security.css\"",
+            "product": "STA潜伏威胁探针",
+            "vendor": "sangfor",
+            "tags": "sangfor-sta"
+          }
+        },
+        "http": [
+          {
+            "method": "GET",
+            "path": [
+              "{{BaseURL}}/login.php"
+            ],
+            "matchers": [
+              {
+                "type": "word",
+                "part": "body",
+                "words": [
+                  "login_new/theme/security.css"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "fings-dev-sangfor-sslvpn",
+        "info": {
+          "name": "深信服-SSLVPN",
+          "author": "xxx",
+          "severity": "info",
+          "description": "description",
+          "metadata": {
+            "fofa-query": "body=\"jssdk/business/vpn_info.js\"",
+            "product": "SSLVPN",
+            "vendor": "sangfor",
+            "tags": "sangfor-sslvpn"
+          }
+        },
+        "http": [
+          {
+            "method": "GET",
+            "path": [
+              "{{BaseURL}}/"
+            ],
+            "matchers": [
+                {
+                    "type": "word",
+                    "words": [
+                        "/por/login_psw.csp",
+                        "/portal\",right:0}];"
+                    ],
+                    "condition": "and",
+                    "case-insensitive": true
+                }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "fings-dev-sangfor-ac",
+        "info": {
+          "name": "深信服-AC上网行为管理",
+          "author": "xxx",
+          "severity": "info",
+          "description": "description",
+          "metadata": {
+            "fofa-query": "body=\"wrfwwcsfbxmigkrkhxfj\"",
+            "product": "AC",
+            "vendor": "sangfor",
+            "tags": "sangfor-ac"
+            }
+        },
+        "http": [
+            {
+                "method": "GET",
+                "path": [
+                    "{{BaseURL}}/"
+                ],
+                "matchers": [
+                    {
+                        "type": "word",
+                        "words": [
+                            "document.write(wrfwwcsfbxmigkrkhxfj"
+                        ],
+                        "case-insensitive": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+      "id": "fings-dev-h3c-secpath",
+      "info": {
+        "name": "新华三-SecPath 运维审计系统",
+        "author": "xxx",
+        "severity": "info",
+        "description": "description",
+        "metadata": {
+          "fofa-query": "body=\"loginFormNoteStepDescH3COEM\"",
+          "product": "SecPath 运维审计系统",
+          "vendor": "h3c",
+          "tags": "h3c-secpath"
+        }
+      },
+      "http": [
+        {
+          "method": "GET",
+          "path": [
+            "{{BaseURL}}/"
+          ],
+          "matchers": [
+            {
+              "type": "word",
+              "part": "body",
+              "words": [
+                "loginFormNoteStepDescH3COEM",
+                "H3C SecPath 运维审计系统"
+              ],
+              "condition": "or"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fings-dev-venus-tianxun",
+      "info": {
+        "name": "启明星辰-天珣内网安全风险管理与审计系统",
+        "author": "xxx",
+        "severity": "info",
+        "description": "description",
+        "metadata": {
+          "fofa-query": "/statics/js/vuejs/auth/Auth.login.js",
+          "product": "天珣内网安全风险管理与审计系统",
+          "vendor": "venus",
+          "tags": "venus-tianxun"
+        }
+      },
+      "http": [
+        {
+          "method": "GET",
+          "path": [
+            "{{BaseURL}}/"
+          ],
+          "matchers": [
+            {
+              "type": "word",
+              "part": "header",
+              "words": [
+                "id={"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fings-dev-venus-webwaf",
+      "info": {
+        "name": "启明星辰-天清Web应用安全网关|WAF",
+        "author": "xxx",
+        "severity": "info",
+        "description": "description",
+        "metadata": {
+          "fofa-query": "app=\"启明星辰-天清WAF\"",
+          "product": "天清Web应用安全网关",
+          "vendor": "venus",
+          "tags": "venus-webwaf"
+        }
+      },
+      "http": [
+        {
+          "method": "GET",
+          "path": [
+            "{{BaseURL}}/login"
+          ],
+          "matchers": [
+            {
+              "type": "word",
+              "part": "body",
+              "words": [
+                "天清Web应用安全网关"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fings-dev-leagsoft-it",
+      "info": {
+        "name": "联软-IT安全运维管理系统",
+        "author": "xxx",
+        "severity": "info",
+        "description": "description",
+        "metadata": {
+          "fofa-query": "manager/Resource/Js/ajax.js",
+          "product": "联软-IT安全运维管理系统",
+          "vendor": "leagsoft",
+          "tags": "leagsoft-it"
+        }
+      },
+      "http": [
+        {
+          "method": "GET",
+          "path": [
+            "{{BaseURL}}/"
+          ],
+          "matchers": [
+            {
+              "type": "word",
+              "part": "body",
+              "words": [
+                "manager/Resource/Js/ajax.js"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fings-dev-leagsoft-uninac",
+      "info": {
+        "name": "联软-网络准入控制",
+        "author": "xxx",
+        "severity": "info",
+        "description": "description",
+        "metadata": {
+          "fofa-query": "manager/Resource/Js/ajax.js",
+          "product": "联软-网络准入控制",
+          "vendor": "leagsoft",
+          "tags": "leagsoft-uninac"
+        }
+      },
+      "http": [
+        {
+          "method": "GET",
+          "path": [
+            "{{BaseURL}}/"
+          ],
+          "matchers": [
+            {
+              "type": "word",
+              "part": "body",
+              "words": [
+                "portal/resources/css/auth_login.css"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fings-dev-leagsoft-xuninac",
+      "info": {
+        "name": "联软-联软网络智能准入系统",
+        "author": "xxx",
+        "severity": "info",
+        "description": "description",
+        "metadata": {
+          "fofa-query": "body=\"lianruan/easyui_dailog.css\"",
+          "product": "联软-联软网络智能准入系统",
+          "vendor": "leagsoft",
+          "tags": "leagsoft-uninac"
+        }
+      },
+      "http": [
+        {
+          "method": "GET",
+          "path": [
+            "{{BaseURL}}/"
+          ],
+          "matchers": [
+            {
+              "type": "word",
+              "part": "body",
+              "words": [
+                "portal/resources/fonts"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fings-dev-sangfor-bbc",
+      "info": {
+        "name": "深信服-集中安全管理平台BBC",
+        "author": "xxx",
+        "severity": "info",
+        "description": "description",
+        "metadata": {
+          "fofa-query": "深信服BBC集中安全管理平台",
+          "product": "BBC集中安全管理平台",
+          "vendor": "sangfor",
+          "tags": "sangfor-bbc"
+        }
+      },
+      "http": [
+        {
+          "method": "GET",
+          "path": [
+            "{{BaseURL}}/bbc/login"
+          ],
+          "matchers": [
+            {
+              "type": "word",
+              "part": "body",
+              "words": [
+                "深信服BBC集中安全管理平台"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fings-dev-h3c-casp",
+      "info": {
+        "name": "新华三-安全威胁发现与运营管理平台",
+        "author": "xxx",
+        "severity": "info",
+        "description": "description",
+        "metadata": {
+          "fofa-query": "web.body=\"/static/js/trunk/utils/password.js\"",
+          "product": "新华三安全威胁发现与运营管理平台",
+          "vendor": "h3c",
+          "tags": "h3c-casp"
+        }
+      },
+      "http": [
+        {
+          "method": "GET",
+          "path": [
+            "{{BaseURL}}/toLogin"
+          ],
+          "matchers": [
+            {
+              "type": "word",
+              "part": "body",
+              "words": [
+                "/static/js/trunk/utils/password.js"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    
+]
