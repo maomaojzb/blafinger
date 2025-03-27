@@ -1,4 +1,4 @@
-[
+  [
     {
         "id": "fings-dev-sangfor-ad",
         "info": {
@@ -411,6 +411,38 @@
               "part": "body",
               "words": [
                 "/static/images/long_string.svg"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fings-dev-antasys-ac",
+      "info": {
+        "name": "汉塔科技-上网行为管理",
+        "author": "xxx",
+        "severity": "info",
+        "description": "description",
+        "metadata": {
+          "fofa-query": "jsimg/menu.js",
+          "product": "汉塔科技上网行为管理",
+          "vendor": "antasys",
+          "tags": "antasys-bbc"
+        }
+      },
+      "http": [
+        {
+          "method": "GET",
+          "path": [
+            "{{BaseURL}}/"
+          ],
+          "matchers": [
+            {
+              "type": "word",
+              "part": "body",
+              "words": [
+                "jsimg/menu.js"
               ]
             }
           ]
