@@ -448,6 +448,38 @@
           ]
         }
       ]
+    },
+    {
+      "id": "fings-dev-tencent-sec",
+      "info": {
+        "name": "腾讯-安全数据网关|堡垒机",
+        "author": "xxx",
+        "severity": "info",
+        "description": "description",
+        "metadata": {
+          "fofa-query": "iam-web/authc/login",
+          "product": "腾讯堡垒机",
+          "vendor": "tencent",
+          "tags": "tencent-sec"
+        }
+      },
+      "http": [
+        {
+          "method": "GET",
+          "path": [
+            "{{BaseURL}}/"
+          ],
+          "matchers": [
+            {
+              "type": "word",
+              "part": "body",
+              "words": [
+                "iam-web/authc/modules/login/js/login.js"
+              ]
+            }
+          ]
+        }
+      ]
     }
     
 ]
