@@ -480,6 +480,162 @@
           ]
         }
       ]
+    },
+    {
+      "id": "fings-dev-zhizhangyi-mbs",
+      "info": {
+        "name": "指掌易-移动安全管理平台-mbs",
+        "author": "xxx",
+        "severity": "info",
+        "description": "description",
+        "metadata": {
+          "fofa-query": "body=\"./build/framework/js/main.js\"",
+          "product": "指掌易移动安全管理平台",
+          "vendor": "zhizhangyi",
+          "tags": "zhizhangyi-mbs"
+        }
+      },
+      "http": [
+        {
+          "method": "GET",
+          "path": [
+            "{{BaseURL}}/"
+          ],
+          "matchers": [
+            {
+              "type": "word",
+              "part": "body",
+              "words": [
+                "build/framework/js/download.js"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fings-dev-zhizhangyi-mos",
+      "info": {
+        "name": "指掌易-数字化安全工作空间-mos",
+        "author": "xxx",
+        "severity": "info",
+        "description": "description",
+        "metadata": {
+          "product": "指掌易数字化安全工作空间",
+          "vendor": "zhizhangyi",
+          "tags": "zhizhangyi-mos"
+        }
+      },
+      "http": [
+        {
+          "method": "GET",
+          "path": [
+            "{{BaseURL}}/"
+          ],
+          "matchers": [
+            {
+              "type": "word",
+              "part": "body",
+              "words": [
+                "build/mos/js/download.js"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fings-edu-ruijie-cas",
+      "info": {
+        "name": "锐捷网络-统一身份认证-cas",
+        "author": "xxx",
+        "severity": "info",
+        "description": "description",
+        "metadata": {
+          "product": "锐捷网络统一身份认证",
+          "vendor": "ruijie",
+          "tags": "ruijie-cas"
+        }
+      },
+      "http": [
+        {
+          "method": "GET",
+          "path": [
+            "{{BaseURL}}/"
+          ],
+          "matchers": [
+            {
+              "type": "word",
+              "part": "body",
+              "words": [
+                "/public/utils/loginNew.js"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fings-oa-dao1-menhu",
+      "info": {
+        "name": "道一云-门户",
+        "author": "xxx",
+        "severity": "info",
+        "description": "description",
+        "metadata": {
+          "product": "道一云-七巧智能门户",
+          "vendor": "dao1",
+          "tags": "dao1-menhu"
+        }
+      },
+      "http": [
+        {
+          "method": "GET",
+          "path": [
+            "{{BaseURL}}/"
+          ],
+          "matchers": [
+            {
+              "type": "word",
+              "part": "body",
+              "words": [
+                "/assets/index.8870e12e.js"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fings-dev-sangfor-osm",
+      "info": {
+        "name": "深信服OSM堡垒机",
+        "author": "xxx",
+        "severity": "info",
+        "description": "description",
+        "metadata": {
+          "product": "深信服-堡垒机",
+          "vendor": "sangfor",
+          "tags": "sangfor-osm"
+        }
+      },
+      "http": [
+        {
+          "method": "GET",
+          "path": [
+            "{{BaseURL}}/fort/help/get_system_name"
+          ],
+          "extractors": [
+            {
+              "type": "json",
+              "part": "body",
+              "json": [
+                ".systemVersion"
+              ]
+            }
+          ]
+        }
+      ]
     }
     
 ]
