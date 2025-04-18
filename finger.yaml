@@ -636,6 +636,131 @@
           ]
         }
       ]
+    },
+    {
+      "id": "fings-dev-nsfocus-osms",
+      "info": {
+        "name": "绿盟运维安全管理系统",
+        "author": "xxx",
+        "severity": "info",
+        "description": "description",
+        "metadata": {
+          "product": "绿盟-运维安全",
+          "vendor": "nsfocus",
+          "tags": "nsfocus-osms"
+        }
+      },
+      "http": [
+        {
+          "method": "GET",
+          "path": [
+            "{{BaseURL}}/"
+          ],
+          "matchers": [
+            {
+              "type": "word",
+              "part": "body",
+              "words": [
+                "js/login/DD_belatedPNG.js"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fings-dev-sangfor-das",
+      "info": {
+        "name": "深信服-DAS数据库审计系统",
+        "author": "xxx",
+        "severity": "info",
+        "description": "description",
+        "metadata": {
+          "product": "深信服DAS数据库审计系统",
+          "vendor": "sangfor",
+          "tags": "sangfor-das"
+        }
+      },
+      "http": [
+        {
+          "method": "GET",
+          "path": [
+            "{{BaseURL}}/"
+          ],
+          "matchers": [
+            {
+              "type": "word",
+              "part": "body",
+              "words": [
+                "static/rooster/vendor/toastr/toastr.min.js"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fings-oa-jeewms-wms",
+      "info": {
+        "name": "JeeWMS-仓库管理系统",
+        "author": "xxx",
+        "severity": "info",
+        "description": "description",
+        "metadata": {
+          "product": "jeewms",
+          "vendor": "jeewms",
+          "tags": "jeewms-wms"
+        }
+      },
+      "http": [
+        {
+          "method": "GET",
+          "path": [
+            "{{BaseURL}}/loginController.do?login"
+          ],
+          "matchers": [
+            {
+              "type": "word",
+              "part": "body",
+              "words": [
+                "plug-in/lhgDialog/lhgdialog.min.js"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fings-edu-banyun-cas",
+      "info": {
+        "name": "半云-一站式服务平台",
+        "author": "xxx",
+        "severity": "info",
+        "description": "description",
+        "metadata": {
+          "product": "半云-一站式服务平台",
+          "vendor": "banyun",
+          "tags": "edu-banyun"
+        }
+      },
+      "http": [
+        {
+          "method": "GET",
+          "path": [
+            "{{BaseURL}}/"
+          ],
+          "matchers": [
+            {
+              "type": "word",
+              "part": "body",
+              "words": [
+                "js/chunk-lodash.c170adf2.js",
+                "/js/loadConfig.js"
+              ]
+            }
+          ]
+        }
+      ]
     }
     
 ]
